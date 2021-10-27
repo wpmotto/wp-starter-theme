@@ -2,6 +2,15 @@ const _ = require("lodash");
 const theme = require('./theme.json');
 const tailpress = require("@jeffreyvr/tailwindcss-tailpress");
 const defaultTheme = require('tailwindcss/defaultTheme')
+const fontSizeMapper = (fonts) => {
+  let result = {};
+
+  fonts.forEach(function(font) {
+      result[''+font.slug+''] = font.size;
+  });
+
+  return result;
+}
 
 module.exports = {
   mode: 'jit',
@@ -21,6 +30,7 @@ module.exports = {
         lg: '0rem'
       },
     },
+    fontSize: fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
     extend: {
       colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
       zIndex: {

@@ -3,9 +3,13 @@
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
+use Roots\Acorn\View\Composers\Concerns\AcfFields;
 
 class Post extends Composer
 {
+
+    use AcfFields;
+    
     /**
      * List of views served by this composer.
      *
