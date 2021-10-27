@@ -14,10 +14,14 @@ use function Roots\asset;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), [], null, true);
-    wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
+    $dependencies = [];
+    if( asset('scripts/vendor.js')->file()->isFile() ) {
+        $dependencies[] = 'sage/vendor.js';
+        wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), [], null, true);
+        wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
+    }
 
-    wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
+    wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), $dependencies, null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
