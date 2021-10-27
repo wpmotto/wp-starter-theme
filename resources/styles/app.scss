@@ -1,8 +1,10 @@
-@import 'tailwindcss/base';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import 'common/global';
-@import 'common/entry-content';
-@import 'layout/nav-primary';
-
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@layer base {
+    @import 'common/global';
+    @import 'common/entry-content';
+    @import 'common/typography';
+    @import 'layout/nav-primary';
+}

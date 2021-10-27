@@ -1,0 +1,23 @@
+.heading {
+    @apply font-heading font-semibold leading-snug;
+}
+
+.has-h-1-font-size,
+.h1 {
+    @apply heading sm:text-2xl md:text-3xl lg:text-4xl;
+}
+
+.has-h-2-font-size,
+.h2 {
+    @apply heading text-2xl md:text-3xl;
+}
+
+.has-h-3-font-size,
+.h3 {
+    @apply heading text-lg md:text-2xl;
+}
+
+.has-h-5-font-size,
+.h5 {
+    @apply heading text-lg;
+}
