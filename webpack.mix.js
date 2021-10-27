@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 require('@tinypixelco/laravel-mix-wp-blocks');
+require('laravel-mix-svg-vue');
 
 /*
  |--------------------------------------------------------------------------
@@ -28,8 +29,20 @@ mix
   .js('resources/scripts/app.js', 'scripts')
   .js('resources/scripts/customizer.js', 'scripts')
   .blocks('resources/scripts/editor.js', 'scripts')
-  .autoload({ jquery: ['$', 'window.jQuery'] })
-  .extract();
+  .vue({ version: 3 })
+  .svgVue({
+    svgPath: 'resources/images/icons',
+    extract: false,
+    svgoSettings: [
+        { addClassesToSVGElement: 'w-6 h-6' },
+        { removeUselessStrokeAndFill: false },
+        { removeUnknownsAndDefaults: false },
+        { removeTitle: true },
+        { removeViewBox: false },
+        { removeDimensions: true },
+    ]
+  })
+  .extract(['vue']);
 
 mix
   .copyDirectory('resources/images', 'public/images')

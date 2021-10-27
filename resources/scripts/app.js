@@ -1,8 +1,7 @@
 /**
  * External Dependencies
  */
-import 'jquery';
 
-$(() => {
-  // console.log('Hello world');
-});
+() => {
+  console.log('Hello world');
+}
