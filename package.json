@@ -46,7 +46,7 @@
     "vue-template-compiler": "^2.6.12",
     "@headlessui/vue": "^1.2.0",
     "@heroicons/vue": "^1.0.1",
-    "laravel-mix-svg-vue": "^0.3.2",
+    "laravel-mix-svg-vue": "^0.4.1",
     "@vue/compiler-sfc": "^3.0.11"    
   }
 }
