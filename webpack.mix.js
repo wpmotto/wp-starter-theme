@@ -15,7 +15,7 @@ require('laravel-mix-svg-vue');
 
 mix
   .setPublicPath('./public')
-  .browserSync('sage.test');
+  .browserSync('sandbox.test');
 
 mix
   .sass('resources/styles/app.scss', 'styles')

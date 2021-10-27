@@ -5,3 +5,11 @@ body {
 .brand {
   @apply text-3xl font-medium text-primary;
 }
+
+.wrap {
+  @apply container mx-auto px-6;
+}
+
+.icon {
+  @apply inline-block;
+}

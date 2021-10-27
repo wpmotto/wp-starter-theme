@@ -1,6 +1,7 @@
 const _ = require("lodash");
 const theme = require('./theme.json');
 const tailpress = require("@jeffreyvr/tailwindcss-tailpress");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
@@ -21,7 +22,13 @@ module.exports = {
       },
     },
     extend: {
-      colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme))
+      colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
+      zIndex: {
+        '-1': '-1',
+      },
+      fontFamily: {
+        'heading': ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
     },
     screens: {
       'sm': '640px',
