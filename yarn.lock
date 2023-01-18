@@ -1525,6 +1525,11 @@
   resolved "https://registry.yarnpkg.com/@wordpress/browserslist-config/-/browserslist-config-4.0.0.tgz#830ba58b7e54743b8ec17d0be413ad530c2c8487"
   integrity sha512-Ckrwjmzq7ADfeWQWJ/RxkwWdsGeqYrOQcIir11z//thvS0CMwCZGtCxeKqU83wStDjUFBp0x7aYsiWAUuitj2A==
 
+"@wordpress/browserslist-config@^5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@wordpress/browserslist-config/-/browserslist-config-5.8.0.tgz#1e078f221ac5c6c6fc46ceab8f134e2671c29716"
+  integrity sha512-n4AzYCpVkeJbpotAq9N23oIBw49HE3Jg6slw7V9BDSWM6huQNRPtP1GLny+mDbfnd803Q9pnSvT6k9+YoXoLqA==
+
 "@wordpress/dependency-extraction-webpack-plugin@^3.1.3":
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/@wordpress/dependency-extraction-webpack-plugin/-/dependency-extraction-webpack-plugin-3.1.3.tgz#a1eff6e91b34840e455e61e7b28730672bd84fef"
